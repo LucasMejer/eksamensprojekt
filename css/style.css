@@ -66,9 +66,9 @@ main {
 
 .main-text-container {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    margin: 25px;
+    flex-flow: column-reverse wrap;
+    align-content: center;
+    margin: 30px;
 }
 
 /*.lucas_img {
@@ -80,20 +80,23 @@ main {
     box-sizing: border-box;
     padding: 10px;
     font-size: 30px;
-    max-width: 240px;
-    max-height: 240px;
+    width: 90vw;
+    max-width: 100%;
+    max-height: 100%;
     background-color: #2090BF;
     color: white;
     border-radius: 25px;
     box-shadow: 0px 10px #00000077;
+    margin-bottom: 15px;
 }
 
 .main-about-img {
-    width: 100%;
-    max-width: 240px;
-    max-height: 240px;
+    width: 90vw;
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 25px;
     box-shadow: 0px 10px #00000077;
+    margin-bottom: 15px;
 }
 
 .main-text2 {
@@ -107,8 +110,9 @@ main {
     box-sizing: border-box;
     padding: 10px;
     font-size: 30px;
-    width: 100%;
-    max-height: 450px;
+    width: 90vw;
+    max-width: 100%;
+    max-height: 100%;
     background-color: #2090BF;
     color: white;
     border-radius: 25px;
@@ -116,7 +120,7 @@ main {
 }
 
 footer {
-    position: static;
+    position: absolute;
     width: 100vw;
     margin-top: auto;
 }
@@ -126,7 +130,8 @@ footer {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    width: auto;
+    width: 100vw;
+    max-width: 100%;
     height: 150px;
     background-color: #20BF9E;
     color: white;
@@ -152,6 +157,22 @@ footer {
         justify-content: flex-end;
     }
 
+    .main-text-container {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        margin: 0px;
+        margin-top: 30px;
+    }
+
+    .main-about-text {
+        width: 35vw;
+    }
+
+    .main-about-img {
+        width: 35vw;
+    }
+
     ul {
         margin: 0px;
         padding: 0px;
@@ -163,6 +184,11 @@ footer {
         margin-right: auto;
         text-align: left;
     }
+
+    .main-skills{
+        width: 80vw;
+    }
+
 }
 
 /*font-size: 25px;
