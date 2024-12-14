@@ -76,22 +76,29 @@ main {
 }
 
 .main-about-text {
+    display: flex;
+    flex-flow: column wrap;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 15px;
     font-size: 30px;
     width: 90vw;
     max-width: 100%;
     max-height: 100%;
     background-color: #2090BF;
     color: white;
-    /*border-radius: 25px;*/
     box-shadow: 0px 10px #00000077;
     margin-bottom: 15px;
     text-shadow: 0px 1px #000000AA;
+    text-align: center;
+    justify-content: center;
+}
+
+.main-about-text__overskrift {
+    font-weight: bold;
+    font-size: 40px;
 }
 
 .main__read-more {
-    float: right;
     text-decoration: underline;
 }
 
@@ -103,9 +110,8 @@ main {
     width: 90vw;
     max-width: 100%;
     max-height: 100%;
-    /*border-radius: 25px;*/
     box-shadow: 0px 10px #00000077;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .main-text2 {
@@ -113,21 +119,51 @@ main {
     flex-flow: row wrap;
     justify-content: center;
     margin: 25px;
+    text-align: center;
 }
 
-.main-skills {
+.main__skills--overskrift {
     box-sizing: border-box;
     padding: 10px;
+    font-weight: bold;
     font-size: 30px;
     width: 90vw;
     max-width: 100%;
     max-height: 100%;
     background-color: #2090BF;
     color: white;
-    /*border-radius: 25px;*/
     box-shadow: 0px 10px #00000077;
     text-shadow: 0px 1px #000000AA;
+    text-align: center;
 }
+
+.main__skills {
+    display: grid;
+    grid-template-areas:
+        "a b"
+        "c d"
+        "e f"
+        "g h";
+    justify-content: space-evenly;
+    font-weight: normal;
+}
+
+.main__skills--box {
+    
+}
+
+    .main__skill--box img {
+        width: 25vw;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+.main__skill--box p {
+    margin-block-start: 0.15em;
+    margin-block-end: 1.25em;
+}
+
+
 
 footer {
     position: absolute;
@@ -217,14 +253,13 @@ footer {
 
 .om_mig__text {
     box-sizing: border-box;
-    padding: 10px;
+    padding:  15px;
     font-size: 30px;
     width: 90vw;
     max-width: 100%;
     max-height: 100%;
     background-color: #2090BF;
     color: white;
-    /*border-radius: 25px;*/
     box-shadow: 0px 10px #00000077;
     margin-bottom: 15px;
     text-shadow: 0px 1px #000000AA;
@@ -234,7 +269,6 @@ footer {
     width: 90vw;
     max-width: 100%;
     max-height: 100%;
-    /*border-radius: 25px;*/
     box-shadow: 0px 10px #00000077;
     margin-bottom: 15px;
 }
@@ -259,6 +293,7 @@ footer {
     height: 125px;
     width: 90%;
 }
+
 
 
 /*media query*/
@@ -297,10 +332,19 @@ footer {
         text-align: left;
     }
 
-    .main-skills{
+    .main__skills--overskrift {
         width: 80vw;
     }
 
+    .main__skills {
+        grid-template-areas:
+            "a b c d"
+            "e f g h"
+    }
+
+    .main__skill--box img {
+        width: 5vw;
+    }
 
     /*projekter side media*/
 
@@ -338,7 +382,7 @@ footer {
     }
 
     .om_mig__text {
-        width: 35vw;
+        width: 45vw;
     }
 
     .om_mig__img {
