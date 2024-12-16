@@ -35,7 +35,7 @@ a{
         color: #2090BF;
     }
 
-.header-overskrift {
+.header-overskrift { 
     text-align: center;
     margin: 0px;
     padding: 0.5em;
@@ -43,6 +43,13 @@ a{
     color: white;
     font-weight: bold;
 }
+
+    .header-overskrift img {
+        display: flex;
+        justify-content: center;
+        width: 90vw;
+        margin: auto;
+    }
 
 ul {
     margin: 0px;
@@ -338,6 +345,10 @@ footer {
         display: flex;
         flex-flow: row nowrap;
         justify-content: flex-end;
+    }
+
+    .header-overskrift img {
+        width: 30vw;
     }
 
     .main-text-container {
